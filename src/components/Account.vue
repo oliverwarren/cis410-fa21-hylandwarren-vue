@@ -8,13 +8,11 @@
     </p>
     <table v-if="ridesByUser" class="table">
       <thead>
-        <th>Driver</th>
         <th>Location From</th>
         <th>Location To</th>
       </thead>
       <tbody>
         <tr v-for="thisRide in ridesByUser" :key="thisRide.RidePK">
-          <th>{{ thisRide.Driver }}</th>
           <th>{{ thisRide.LocationTo }}</th>
           <th>{{ thisRide.LocationFrom }}</th>
         </tr>
