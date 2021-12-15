@@ -14,6 +14,8 @@
     <router-link v-if="auth" :to="`/drivers/${this.$route.params.pk}/ride`"><button class="btn btn-success">Add a Ride</button></router-link>
     <router-link v-else :to="`/login`"><button class="btn btn-outline-success">Sign In to Add a Ride</button></router-link>
 
+<br/> <br/> 
+    <router-view />
   </div>
 </template>
 
