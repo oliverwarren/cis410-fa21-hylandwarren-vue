@@ -13,6 +13,11 @@
       </thead>
       <tbody>
         <tr v-for="thisRide in ridesByUser" :key="thisRide.RidePK">
+          <th>
+            <router-link :to="`/rides/${thisRide.DriverFK}`">{{
+              thisRide.DriverFirstName
+            }}</router-link>
+          </th>
           <th>{{ thisRide.LocationTo }}</th>
           <th>{{ thisRide.LocationFrom }}</th>
         </tr>
