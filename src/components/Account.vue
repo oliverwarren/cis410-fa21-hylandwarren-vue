@@ -8,16 +8,19 @@
     </p>
     <table v-if="ridesByUser" class="table">
       <thead>
+        <!-- <th>Driver </th> -->
+        <th>Driver ID</th>
         <th>Location From</th>
         <th>Location To</th>
       </thead>
       <tbody>
         <tr v-for="thisRide in ridesByUser" :key="thisRide.RidePK">
-          <th>
+          <!-- <th>
             <router-link :to="`/rides/${thisRide.DriverFK}`">{{
-              thisRide.DriverFirstName
+              thisRide.DriverFK.DriverFirstName
             }}</router-link>
-          </th>
+          </th> -->
+          <th>{{ thisRide.DriverFK}}</th>
           <th>{{ thisRide.LocationTo }}</th>
           <th>{{ thisRide.LocationFrom }}</th>
         </tr>
